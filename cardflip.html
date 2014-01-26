@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#flip').click(function(){
+			$('#card1').toggleClass('flipped');
+			$('#card2').toggleClass('flipped');
+		});
+	});
+</script>
+</head>
+<style>
+	figure {
+		margin: 0;
+	}
+
+	.container {
+		width: 200px;
+		height: 260px;
+		position: relative;
+		/*margin: 0 auto 40px;*/
+		border: 1px solid #CCC;
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
+		-o-perspective: 800px;
+		perspective: 800px;
+		float: left;
+    }
+
+    #card1 {
+      	width: 100%;
+      	height: 100%;
+      	position: absolute;
+		-webkit-transition: -webkit-transform 1s;
+		-moz-transition: -moz-transform 1s;
+		-o-transition: -o-transform 1s;
+		transition: transform 1s;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+    }
+    
+    #card2 {
+      	width: 100%;
+      	height: 100%;
+      	position: absolute;
+		-webkit-transition: -webkit-transform 1s;
+		-moz-transition: -moz-transform 1s;
+		-o-transition: -o-transform 1s;
+		transition: transform 1s;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+    }
+
+    #card1.flipped {
+		-webkit-transform: rotateY( 180deg );
+		-moz-transform: rotateY( 180deg );
+		-o-transform: rotateY( 180deg );
+		transform: rotateY( 180deg );
+    }
+    
+    #card2.flipped {
+		-webkit-transform: rotateY( 180deg );
+		-moz-transform: rotateY( 180deg );
+		-o-transform: rotateY( 180deg );
+		transform: rotateY( 180deg );
+    }
+
+    #card1 figure {
+		display: block;
+		height: 100%;
+		width: 100%;
+		line-height: 260px;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+		font-size: 140px;
+		position: absolute;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		backface-visibility: hidden;
+    }
+    
+    #card2 figure {
+		display: block;
+		height: 100%;
+		width: 100%;
+		line-height: 260px;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+		font-size: 140px;
+		position: absolute;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		backface-visibility: hidden;
+    }
+
+    #card1 .front {
+      	background: red;
+    }
+    
+    #card2 .front {
+      	background: red;
+    }
+
+    #card1 .back {
+		background: blue;
+		-webkit-transform: rotateY( 180deg );
+		-moz-transform: rotateY( 180deg );
+		-o-transform: rotateY( 180deg );
+		transform: rotateY( 180deg );
+    }
+    
+    #card2 .back {
+		background: blue;
+		-webkit-transform: rotateY( 180deg );
+		-moz-transform: rotateY( 180deg );
+		-o-transform: rotateY( 180deg );
+		transform: rotateY( 180deg );
+    }
+</style>
+<body>
+  <section id="options">
+    <p><button id="flip">Flip Card</button></p>
+  </section>
+  <div class="container">
+    <div id="card1">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+    </div>
+  </div>
+  <div class="container">
+    <div id="card2">
+      <figure class="front">3</figure>
+      <figure class="back">4</figure>
+    </div>
+  </div>
+</body>
+</html>

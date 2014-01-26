@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<style>
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	background: #FFCB00;
+	overflow: hidden;
+}
+header{
+    position: absolute;
+    z-index: 1000;
+    width: 200px;
+    top:0;
+    height:100%;
+    background: red;
+}
+header nav{
+	z-index: 3;
+}
+.panel{
+    min-width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: -150%;
+    /*animate horizontally*/
+    /*margin-left: -102%;*/   
+    position: absolute;
+    background: #000;
+    z-index: 2;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -ms-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+.panel:target{
+    margin-top: 0%;
+    /*animate horizontally*/
+    /*margin-left: -102%;*/
+    background-color: #ffcb00;
+}
+.content{
+    left: 220px;
+    right: 40px;
+    top: 0px;
+    position: absolute;
+    padding-bottom: 30px;
+    font-size:14px;
+}
+</style>
+<body>
+<!-- Header with Navigation -->
+<header>
+    <h1>Header</h1>
+    <nav>
+		<a id="link-home" href="#home">Home</a>
+        <a id="link-about" href="#about">About Me</a>
+        <a id="link-portfolio" href="#portfolio">Portfolio</a>
+        <a id="link-contact" href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Different Sections -->
+<section id="home" class="content">
+	<h2>home<h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum, tortor a elementum aliquam, purus odio mattis justo, sed porta nisi enim ac nulla. Nullam mauris lectus, iaculis vitae ullamcorper sed, vulputate ac risus. Sed quis enim ligula, ut ultricies ipsum. In tristique aliquet augue, sed cursus enim blandit a. Maecenas quis lacus arcu, eget venenatis justo. Sed eu lectus ante, ut hendrerit elit. Maecenas fringilla odio et ligula semper eu consequat est egestas. Maecenas ultrices faucibus semper. Vivamus quis massa tortor, nec cursus mi. Nam convallis tincidunt nibh, at fermentum massa eleifend at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc faucibus euismod egestas. Praesent et laoreet lorem. Maecenas leo lorem, tristique in venenatis pulvinar, tempor ac purus. Phasellus euismod ligula quis neque pretium at adipiscing magna imperdiet.</p>
+
+	<p>Pellentesque ac nulla quis nisi dignissim pellentesque sit amet et lacus. Sed consectetur, sapien quis aliquet lobortis, velit sapien imperdiet dui, et vestibulum diam quam at eros. Ut scelerisque nisl id neque interdum ut varius libero convallis. Cras viverra cursus pharetra. Morbi eros urna, sodales eu gravida vel, consequat in diam. Suspendisse sit amet mi quis diam fringilla vehicula quis et mi. Donec tortor enim, laoreet eget tempor sed, faucibus at dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac nisi sapien. Aenean nec felis id nisl pretium adipiscing sit amet et ante. Curabitur tempor massa mi. Curabitur at nibh vel sapien sollicitudin gravida.</p>
+</section>
+
+<section id="about" class="panel">
+	<div class="content">
+		<h2>about<h2>
+		<p>Ut eu dui mauris. Sed eu elit nisl. In at tellus tellus, eu tincidunt enim. Mauris eget mi ac dolor sagittis mollis eu non eros. Nam venenatis, justo at iaculis eleifend, elit justo imperdiet nibh, eu consectetur nunc eros ac quam. Sed nibh urna, mattis a accumsan eget, feugiat vitae ante. Donec et lorem massa, vitae faucibus lorem. Vestibulum nec neque nec diam ullamcorper lobortis sit amet eget tortor. Mauris mauris nulla, mattis sit amet consequat id, tincidunt in augue. Vestibulum at ultrices dui. Curabitur tempus bibendum egestas. Fusce tincidunt nunc vel velit congue elementum. Donec egestas mauris eget justo consequat faucibus. Phasellus suscipit risus ac felis sagittis congue.</p>
+
+		<p>Mauris mollis ligula id arcu bibendum euismod. Integer nibh neque, molestie a aliquet eget, aliquam vel libero. Phasellus porttitor imperdiet laoreet. Donec tincidunt varius urna, eget sodales augue molestie sit amet. Pellentesque pretium condimentum tincidunt. Praesent aliquam viverra sem, a aliquet dolor interdum ac. Maecenas eget neque ligula.</p>
+	</div>	
+</section>
+
+<section id="portfolio" class="panel">
+	<div class="content">
+		<h2>portfolio<h2>
+		<p>Sed erat diam, egestas sit amet mattis at, cursus id velit. Donec tristique aliquet orci, fermentum tristique urna semper non. Proin nec quam sed dolor sollicitudin pellentesque. In id lorem eu nunc molestie laoreet. Fusce pharetra tellus eu enim imperdiet eget egestas magna feugiat. Etiam quis ipsum lectus, blandit blandit lacus. Phasellus faucibus libero at ligula dictum quis tincidunt dolor euismod. Nam nec lorem vel nulla tempus aliquam. Sed a augue mauris.</p>
+
+		<p>Nam mi elit, vehicula non iaculis aliquam, imperdiet ut libero. In lacinia diam quis tellus rutrum sodales. Aenean tempus ullamcorper nulla vel ultrices. Suspendisse venenatis, nisl at feugiat condimentum, nunc neque commodo nulla, vel facilisis arcu sem non enim. Morbi sagittis semper felis pulvinar elementum. Morbi vulputate luctus ante in aliquet. Morbi orci est, ornare vitae vulputate vehicula, mattis vitae libero. Aliquam turpis lacus, feugiat quis sollicitudin at, laoreet et sem. Nulla tristique tristique sagittis. Etiam eu erat at lacus tempus malesuada eu quis purus. Vestibulum accumsan sapien sed risus consectetur imperdiet id et sem. Nulla facilisi. Curabitur et diam in metus volutpat rutrum at a dui.</p>
+	</div>
+</section>
+
+<section id="contact" class="panel">
+	<div class="content">
+		<h2>contact<h2>
+		<p>Fusce tincidunt consectetur augue suscipit facilisis. Fusce blandit nisl ac magna laoreet in consequat quam facilisis. Praesent mattis vestibulum molestie. Morbi magna enim, vulputate eget porta a, porttitor dignissim massa. Fusce auctor posuere bibendum. Mauris vitae magna id felis ullamcorper viverra quis hendrerit velit. Nunc euismod sem id risus vestibulum fermentum sit amet vitae neque. Aliquam erat volutpat. Ut sed urna lacus, convallis lacinia orci.</p>
+
+		<p>Cras iaculis venenatis diam, nec dapibus felis facilisis non. Donec rutrum neque sit amet neque volutpat ornare. Proin ac magna sem, in aliquam dui. Morbi facilisis risus odio. Morbi eget lacus sit amet arcu mollis facilisis eget ac erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a massa a lectus congue tristique mollis semper quam. Maecenas lacinia fringilla mattis. Aenean nec magna felis, quis vestibulum libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci elit, adipiscing eu accumsan et, gravida eget ipsum. Suspendisse placerat commodo felis et ultricies. Nam auctor sagittis nunc eget congue. Donec a diam non libero auctor pretium. Nam dolor elit, sagittis quis malesuada eu, cursus eget sem. Nulla vel ligula purus, id mollis dui.</p>
+	</div>
+</section>
+
+</body>
+</html>

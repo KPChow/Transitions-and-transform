@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<style>
+body {
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #666;
+	background: black;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: 200;
+	overflow: hidden;
+}
+
+.cube {
+	position: relative;
+	top: 400px;
+	-webkit-transition: -webkit-transform .5s linear;
+	-moz-transition: -moz-transform .5s linear;
+	-o-transition: -o-transform .5s linear;
+	-ms-transition: -ms-transform .5s linear;
+	transition: transform .5s linear;
+}
+
+
+/* Animate the cube when hover over */
+.cube:hover{
+	-webkit-transform: translate(0, -126px);
+	-moz-transform: translate(0, -126px);
+	-o-transform: translate(0, -126px);
+	-ms-transform: translate(0, -126px);
+	transform: translate(0,-126px);
+}
+
+/* Positioning the cubes */
+.cube.one{top:276px;}
+
+.cube.two{left: 215px; top: 276px;}
+
+.cube.three{left: 108px; top: 338px;}
+
+.cube.four{left: 428px; top: 277px;}
+
+.cube.five{left: 322px; top: 338px;}
+
+.cube.six{left: 215px;}
+
+.cube.seven{left: 642px; top: 277px;}
+
+.cube.eight{left: 534px; top: 339px;}
+
+.cube.nine{left: 429px;}
+
+.cube.ten{left: 322px; top: 462px;}
+
+.cube.eleven{left: 858px; top: 276px;}
+
+.cube.twelve{left: 750px; top: 338px;}
+
+.cube.thirteen{left: 642px; top: 400px;}
+
+.cube.fourteen{left: 536px; top:461px;}
+
+.cube.fifthteen{left: 429px; top: 524px;}
+
+
+/* Set dimension for each side of the cube */
+.rightFace, .leftFace, .topFace {
+    position: absolute;
+    padding: 10px;
+	width: 100px;
+	height: 100px;
+	border: 1px solid;
+}
+
+/* Change the div tag's dimension */
+.leftFace {
+	-webkit-transform: rotate(15deg) skew(15deg, 15deg);
+	-moz-transform: rotate(15deg) skew(15deg, 15deg);
+	-o-transform: rotate(15deg) skew(15deg, 15deg);
+	-ms-transform: rotate(15deg) skew(15deg, 15deg);
+	transform: rotate(15deg) skew(15deg, 15deg);
+	background-color: #ccc;
+}
+
+.rightFace {
+	-webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
+	-moz-transform: rotate(-15deg) skew(-15deg, -15deg);
+	-o-transform: rotate(-15deg) skew(-15deg, -15deg);
+	-ms-transform: rotate(-15deg) skew(-15deg, -15deg);
+	transform: rotate(-15deg) skew(-15deg, -15deg);
+	background-color: #ddd;
+	left: 107px;
+}
+
+.topFace {
+	-webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+	-moz-transform: rotate(-45deg) skew(15deg, 15deg);
+	-o-transform: rotate(-45deg) skew(15deg, 15deg);
+	-ms-transform: rotate(-45deg) skew(15deg, 15deg);
+	transform: rotate(-45deg) skew(15deg, 15deg);
+	top: -93px;
+	left: 54px;
+	background-color: #eee;
+}
+</style>
+<body>
+
+<div class="cube one">
+	<div class="topFace">
+		Content 1
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube two">
+	<div class="topFace">
+		Content 2
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube three">
+	<div class="topFace">
+		Content 3
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube four">
+	<div class="topFace">
+		Content 4
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube five">
+	<div class="topFace">
+		Content 5
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube six">
+	<div class="topFace">
+		Content 6
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube seven">
+	<div class="topFace">
+		Content 7
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube eight">
+	<div class="topFace">
+		Content 8
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube nine">
+	<div class="topFace">
+		Content 9
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube ten">
+	<div class="topFace">
+		Content 10
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube eleven">
+	<div class="topFace">
+		Content 11
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube twelve">
+	<div class="topFace">
+		Content 12
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube thirteen">
+	<div class="topFace">
+		Content 13
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube fourteen">
+	<div class="topFace">
+		Content 14
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+<div class="cube fifthteen">
+	<div class="topFace">
+		Content 15
+	</div>
+	<div class="leftFace">
+		Content
+	</div>
+	<div class="rightFace">
+		Content
+	</div>
+</div>
+
+</body>
+</html>

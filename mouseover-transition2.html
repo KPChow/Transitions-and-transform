@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#rotate').click(function(){
+			$('.ch-img-1').toggleClass('rotated');
+		});
+	});
+</script>
+</head>
+<style>
+/* Default Setting - START */
+.ch-grid li {
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.ch-img-1 { 
+    background: grey;
+}
+
+/* Default Setting - END */
+
+.ch-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    cursor: default;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.ch-thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: inset 0 0 0 15px rgba(255,255,255, 0.5);
+    -webkit-transform-origin: 95% 40%;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.ch-info {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #c9512e;
+}
+
+.ch-item:hover .ch-thumb {
+    -webkit-transform: rotate(-110deg);
+}
+
+.rotated {
+    -webkit-transform: rotate(-110deg);
+}
+
+</style>
+<body>
+<p><button id="rotate">Rotate</button></p>
+<ul class="ch-grid">
+    <li>
+        <div class="ch-item"> 
+            <div class="ch-info"></div>
+            <div class="ch-thumb ch-img-1"></div>
+        </div>
+    </li>
+</ul>
+</body>
+</html>
